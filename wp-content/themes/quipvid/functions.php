@@ -12,7 +12,7 @@ add_action('wp_enqueue_scripts', 'custom_load_scripts');
 function custom_load_scripts()
 {
 
-  wp_register_script('custom-main', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), QUIP_ASSETS_VER, TRUE);
+  wp_register_script('custom-main', get_template_directory_uri() . '/static/app.js', array('jquery'), QUIP_ASSETS_VER, TRUE);
   wp_enqueue_script('custom-main');
 
   wp_register_style('theme-css', get_stylesheet_directory_uri() . '/style.css', FALSE, QUIP_ASSETS_VER, FALSE);

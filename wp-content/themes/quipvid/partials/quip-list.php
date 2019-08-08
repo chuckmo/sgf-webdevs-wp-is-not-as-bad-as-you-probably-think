@@ -2,9 +2,11 @@
   <?php
   // $quip_list_q should be setup as a WP_Query instance before this file is loaded
   global $quip_list_q;
-  if($quip_list_q->post_count == 0){
+
+  if($quip_list_q->post_count == 0) {
     echo '<strong>No quips bro</strong>';
   }
+
   while($quip_list_q->have_posts()):
     $quip_list_q->the_post();
     $thumbnail = get_field('thumbnail');
